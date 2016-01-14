@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Echo - Contact us</title>
+	    <link href="./favicon1.png" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="fonts.css">
+<link rel="stylesheet" type="text/css" href="form.css">
+<link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="logos">
+<a href="http://www.stfc.ac.uk"><img src="stfclogo.png" class="logostyle"></a>
+
+<a href= "index.html"><img src="echo-logo2.svg" class="echoimg"></a>
+</div>
+
+<h1 class="pagetitle">Feedback</h1>
+<div class="bodytext">
+<a href="mailto:info@gridpp.ac.uk"> Email us</a><br><br>
+<script>function validateForm() {
+    var name = document.forms["contactForm"]["name"].value;
+    var body = document.forms["contactForm"]["body"].value;
+    var validate = document.forms["contactForm"]["validate"].value;
+
+    if (name == null || name == "") {
+        alert("Name must be filled out.");
+        return false;
+    } else if (body == null || body == "") {
+        alert("Message body is blank. Please fill out.");
+        return false;
+    } else if (validate != 9 ) {
+        alert("Enter a number");
+        return false;
+    }
+    var sub = true
+    alert("Message submitted. Please allow some time for a response.")
+    if(sub == true){window.location = "http://google.com"}
+}</script>
+<form name="contactForm" action="" onsubmit="JavaScript:validateForm()" method="post">
+ <ul style="list-style-type: none"> 
+      <li><label for="name">Name:</label> 
+      <input type="text" name="name" id="name"></li><br><br>
+      <li><label for="body">Message:</label>
+      <textarea for="contactForm" id="body"></textarea></li><br><br><br><br><br>
+       <li><label for="validate">What is 6 + 3?:</label> 
+      <input type="number" name="validate" id="validate"></li><br>
+      <input type="submit" value="Submit" class ="submitbutton">
+  </ul>
+
+
+</form>
+
+
+<p> To return to the home page click <a href="index.html"> here </a></p>
+</div>
+</body>
+</html>
